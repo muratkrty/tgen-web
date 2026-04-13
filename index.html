@@ -113,6 +113,7 @@
       justify-content: center;
       gap: 14px;
       text-align: center;
+      width: 100%;
     }
 
     .wordmark {
@@ -123,6 +124,7 @@
       line-height: 1;
       text-align: center;
       margin: 0;
+      text-wrap: balance;
     }
 
     .email {
@@ -133,6 +135,7 @@
       text-align: center;
       opacity: 0.9;
       text-decoration: none;
+      overflow-wrap: anywhere;
     }
 
     .email:hover {
@@ -143,16 +146,84 @@
       .site-header {
         flex-direction: column;
         align-items: flex-start;
+        gap: 18px;
       }
 
       .nav {
         justify-content: flex-start;
-        gap: 18px 24px;
+        gap: 16px 20px;
       }
 
       .hero {
         min-height: auto;
-        padding: 72px 24px;
+        padding: 64px 24px 80px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      :root {
+        --pad-x: 16px;
+        --pad-y: 18px;
+      }
+
+      .site-header {
+        align-items: center;
+        gap: 16px;
+      }
+
+      .brand {
+        justify-content: center;
+      }
+
+      .brand-logo {
+        width: 32px;
+        height: 32px;
+      }
+
+      .brand-name {
+        font-size: 22px;
+      }
+
+      .nav {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 4px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      .nav::-webkit-scrollbar {
+        display: none;
+      }
+
+      .nav a {
+        font-size: 14px;
+        padding: 8px 12px;
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 999px;
+        flex: 0 0 auto;
+      }
+
+      .hero {
+        min-height: calc(100vh - 120px);
+        padding: 40px 20px 56px;
+      }
+
+      .wrap {
+        gap: 12px;
+      }
+
+      .wordmark {
+        font-size: clamp(42px, 16vw, 72px);
+      }
+
+      .email {
+        font-size: 15px;
+        letter-spacing: 0.04em;
+        max-width: 100%;
       }
     }
   </style>
@@ -173,7 +244,7 @@
     </nav>
   </header>
 
-  <main class="hero">
+  <main class="hero" id="home">
     <div class="wrap">
       <h1 class="wordmark">Ticagen</h1>
       <a class="email" href="mailto:contact@ticagen.ai">contact@ticagen.ai</a>
