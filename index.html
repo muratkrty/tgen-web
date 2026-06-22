@@ -6,6 +6,20 @@
 <title>Ticagen — Agentic AI &amp; Robotics Studio</title>
 <meta name="description" content="Ticagen is a research-led studio designing agentic AI systems and robotics hardware for industry, research, and education.">
 <meta name="theme-color" content="#0A0A0B">
+<link rel="icon" type="image/x-icon" href="assets/favicons/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+<link rel="manifest" href="assets/favicons/site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ticagen — Agentic AI &amp; Robotics Studio">
+<meta property="og:description" content="Ticagen is a research-led studio designing agentic AI systems and robotics hardware for industry, research, and education.">
+<meta property="og:url" content="https://ticagen.ai/">
+<meta property="og:image" content="https://ticagen.ai/assets/wlogo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ticagen — Agentic AI &amp; Robotics Studio">
+<meta name="twitter:description" content="Ticagen is a research-led studio designing agentic AI systems and robotics hardware for industry, research, and education.">
+<meta name="twitter:image" content="https://ticagen.ai/assets/wlogo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -237,6 +251,17 @@
   .principle h4{font-size:1.06rem;font-weight:600;letter-spacing:-.01em;margin:0;}
   .principle p{margin:0;color:var(--muted);font-size:.95rem;line-height:1.55;}
 
+  /* ---------- team ---------- */
+  .team{display:grid;grid-template-columns:1fr;gap:28px;}
+  @media (min-width:680px){ .team{grid-template-columns:repeat(2,1fr);gap:clamp(28px,5vw,64px);} }
+  .member{display:flex;align-items:center;gap:20px;}
+  .member-name{font-size:1.2rem;font-weight:700;letter-spacing:-.01em;margin:0 0 5px;}
+  .member-role{
+    font-family:var(--mono);font-size:.66rem;font-weight:500;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--faint);margin:0 0 9px;
+  }
+  .member-bio{color:var(--muted);font-size:.92rem;line-height:1.5;margin:0;max-width:34ch;}
+
   /* ---------- contact / footer ---------- */
   footer{border-top:1px solid var(--line-strong);padding:clamp(60px,9vh,104px) 0 40px;}
   .foot-eyebrow{margin-bottom:24px;}
@@ -269,15 +294,15 @@
   <header class="nav" id="top">
     <div class="wrap nav-inner">
       <a class="brand" href="#top" aria-label="Ticagen — home">
-        <img class="brand-logo" src="assets/wlogo.png" />
+        <img class="brand-logo" src="assets/wlogo.png" alt="Ticagen logo" width="44" height="28">
         <span class="brand-name">TICAGEN</span>
       </a>
 
       <nav class="nav-desktop" aria-label="Primary">
         <ul class="nav-links">
           <li><a href="#capabilities">Capabilities</a></li>
-          <li><a href="#research">Research</a></li>
           <li><a href="#about">About</a></li>
+          <li><a href="#team">Team</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -290,8 +315,8 @@
     <nav class="nav-mobile" id="mobile-menu" aria-label="Mobile" hidden>
       <ul>
         <li><a href="#capabilities">Capabilities</a></li>
-        <li><a href="#research">Research</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#team">Team</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -301,43 +326,137 @@
     <!-- HERO -->
     <section class="hero">
       <div class="wrap">
-        <!-- <p class="eyebrow hero-eyebrow">AI · Robotics · Design ·  Research Studio</p> -->
+
         <h1 class="hero-title">Intelligent systems, precisely engineered.</h1>
         <p class="hero-lede">Ticagen is an engineering studio designing agentic AI and robotics hardware. We build for industry, research, and education.</p>
-        <div class="hero-cta">
+       <div class="hero-cta">
           <a class="btn btn-primary" href="mailto:contact@ticagen.ai">Start a project</a>
-          <!-- <a class="btn btn-ghost" href="#capabilities">See capabilities</a> -->
-        </div>
-        <div class="readout" role="group" aria-label="Studio status">
-          <span class="readout-status"><span class="dot" aria-hidden="true"></span>Available for new projects</span>
-          <span class="readout-sep" aria-hidden="true"></span>
-          <span class="readout-sep" aria-hidden="true"></span>
-          <span>Tilburg · NL</span>
-          <!-- <span class="readout-sep" aria-hidden="true"></span>
-          <span>51.56°N 5.09°E</span>
-          <span class="readout-sep" aria-hidden="true"></span>
-          <span>UTC <span data-utc>00:00:00</span></span> -->
+        <a class="btn btn-ghost" href="#capabilities">See capabilities</a> 
         </div>
       </div>
     </section>
 
+    <!-- CAPABILITIES -->
+    <section class="sec" id="capabilities">
+      <div class="wrap">
+        <div class="shead">
+          <!-- <p class="eyebrow">Capabilities</p> -->
+          <h2>Capabilities</h2>
+  
+        </div>
+
+        <div class="caps">
+          <article class="cap">
+            <p class="cap-kind">Consulting · Development · Evaluation</p>
+            <h3 class="cap-title">Agentic AI Systems</h3>
+            <p class="cap-desc">Design, architecture, and evaluation of agentic systems for real-world production. </p>
+            <ul class="caplist">
+              <li>System architecture &amp; agent design</li>
+              <li>Evaluation, trustworthiness &amp; guardrails</li>
+              <li>Integration with existing workflows, products &amp; data</li>
+              
+            </ul>
+            <a class="cap-link" href="mailto:contact@ticagen.ai">Start a project →</a>
+          </article>
+
+          <article class="cap">
+            <p class="cap-kind">Design · Prototype · Build</p>
+            <h3 class="cap-title">Robotics Hardware</h3>
+            <p class="cap-desc"> Design, prototype, and build robotics hardware from custom sensor-actuator rigs to complete platforms.</p>
+            <ul class="caplist">
+              <li>Custom research platforms &amp; kits</li>
+              <li>Software development &amp; embedded systems</li>
+              <li>Sensing, actuation &amp; control</li>
+            </ul>
+            <a class="cap-link" href="mailto:contact@ticagen.ai">Discuss a build →</a>
+          </article>
+        </div>
+        </div>
+    </section>
+
+
+
+    <!-- ABOUT -->
+    <section class="sec" id="about">
+      <div class="wrap">
+        <div class="shead">
+          <!-- <p class="eyebrow">About</p> -->
+          <h2>About</h2>
+          <!-- <p>At the intersection of AI, robotics, and research — with the discipline to build only what earns its place.</p> -->
+        </div>
+
+        <div class="split">
+          <div class="split-lead">
+            <p>Ticagen is an engineering studio in Tilburg, the Netherlands.</p>
+            <p> We build agentic software for teams shipping products, and robotics hardware for research and education. Founded 2026, working with partners across research and industry.</p>
+          </div>
+
+
+          <div>
+            <p class="colhead">Operating principles</p>
+
+            <div class="principle">
+              <h4>Trustworthy by design</h4>
+              <p> Reliability and transparency, built in from the start.</p>
+            </div>
+            <div class="principle">
+              <h4>Made to be understood</h4>
+              <p>Clear user interfaces and documented systems.</p>
+            </div>
+            <div class="principle">
+              <h4>Built to last</h4>
+              <p>Designed to be maintained, repaired, and extended.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
    
+    <!-- TEAM -->
+    <section class="sec" id="team">
+      <div class="wrap">
+        <div class="shead">
+          <h2>Team</h2>
+          <!-- <p>A small studio backed by deep research experience.</p> -->
+        </div>
+
+        <div class="team">
+          <article class="member">
+            <div class="member-info">
+              <h3 class="member-name">Murat Kirtay</h3>
+              <p class="member-role">Founder</p>
+              <p class="member-bio">Robotics, Agentic AI, Intelligent User Interfaces</p>
+            </div>
+          </article>
+
+          <article class="member">
+            <div class="member-info">
+              <h3 class="member-name">Hae Seon Yun</h3>
+              <p class="member-role">Project Collaborator</p>
+              <p class="member-bio">Human-Robot Interaction, Intelligent Tutoring Systems</p>
+            </div>
+          </article>
+
+          <article class="member">
+            <div class="member-info">
+              <h3 class="member-name">Giacomo Spigler</h3>
+              <p class="member-role">Project Collaborator</p>
+              <p class="member-bio">Physical AI, Deep Reinforcement Learning, Robot Design</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
   <!-- CONTACT / FOOTER -->
   <footer id="contact">
     <div class="wrap">
       <p class="eyebrow foot-eyebrow">Contact</p>
       <a class="foot-mail" href="mailto:contact@ticagen.ai">contact@ticagen.ai</a>
-      <!-- <p class="foot-line">_</p>
-      <div class="foot-links">
-        <a href="#" aria-label="LinkedIn">LinkedIn</a>
-        <a href="#" aria-label="Google Scholar">Google Scholar</a>
-        <a href="#" aria-label="GitHub">GitHub</a>
-        <a href="mailto:contact@ticagen.ai">Email</a>
-      </div> -->
-
       <div class="foot-bar">
         <div class="foot-id">
-          <img class="foot-logo" src="assets/wlogo.png" />
+          <img class="foot-logo" src="assets/wlogo.png" alt="Ticagen logo" width="31" height="20">
           <span class="brand-name">© <span data-year>2026</span> TICAGEN</span>
         </div>
       </div>
@@ -373,17 +492,7 @@
         });
       }
 
-      // live UTC clock + year
-      var clocks = document.querySelectorAll('[data-utc]');
-      var pad = function(n){ return String(n).padStart(2,'0'); };
-      var tick = function(){
-        var d = new Date();
-        var t = pad(d.getUTCHours()) + ':' + pad(d.getUTCMinutes()) + ':' + pad(d.getUTCSeconds());
-        for (var i=0;i<clocks.length;i++){ clocks[i].textContent = t; }
-      };
-      tick(); setInterval(tick, 1000);
-      var y = new Date().getFullYear();
-      document.querySelectorAll('[data-year]').forEach(function(el){ el.textContent = y; });
+      document.querySelectorAll('[data-year]').forEach(function(el){ el.textContent = new Date().getFullYear(); });
     })();
   </script>
 </body>
